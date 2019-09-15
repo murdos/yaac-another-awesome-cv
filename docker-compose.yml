@@ -1,0 +1,8 @@
+version: '2'
+services:
+  yaac-another-awesome-cv:
+    build:
+      context: .
+    command: bash -c "cd /usr/src/project/example && latexmk -cd -f -lualatex -interaction=nonstopmode -synctex=1 cv.tex"
+    volumes:
+      - .:/usr/src/project
